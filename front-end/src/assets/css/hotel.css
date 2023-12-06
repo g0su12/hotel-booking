@@ -1,0 +1,235 @@
+.hotel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+
+.hotelGroup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 63%;
+    align-items: flex-start;
+    margin: 1rem 0;
+}
+
+
+.hotelList {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+}
+
+.hotelListTitle {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.hotelCard {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 18rem;
+    margin: 1rem 0 !important;
+}
+
+.hotelCard img {
+    width: 20rem !important;
+    height: 15rem;
+    padding: 0.5rem;
+    border-radius: 15px !important;
+    object-fit: cover;
+}
+
+.hotel .ant-card-body {
+    padding: 0 !important;
+}
+
+.hotelCardInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0 1rem;
+}
+
+.hotelCardInfo h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.hotelCardInfo h3 {
+    font-size: 1rem;
+    color: #8c8c8c;
+    font-weight: 500;
+}
+
+.hotelCardInfo h4 {
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+    font-weight: 500;
+}
+
+.imgItem {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.hotelCardButton {
+    width: 10rem;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.hotelSort {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+}
+
+.hotelSort h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1rem 0;
+}
+
+.hotelSortItem {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    border: 1px solid #cfcfcf;
+    border-radius: 5px;
+}
+
+.PriceGroup {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.PriceGroup table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    align-items: flex-start;
+}
+
+.PriceGroup table tr {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.PriceGroup table tr td input {
+    width: 100%;
+    height: 1rem;
+    border: 1px solid #cfcfcf;
+    border-radius: 5px;
+    outline: none;
+    margin-right: 2rem;
+}
+
+.SearchItem {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.SearchItem input {
+    width: 100%;
+    height: 2.5rem;
+    border: 1px solid #cfcfcf;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    outline: none;
+}
+
+.Cancellation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.Cancellation table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    align-items: flex-start;
+}
+
+.Cancellation table tr {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.Cancellation table tr td input {
+    width: 100%;
+    height: 1rem;
+    border: 1px solid #cfcfcf;
+    border-radius: 5px;
+    outline: none;
+    margin-right: 2rem;
+}
+
+
+.Rating {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.Rating table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    align-items: flex-start;
+}
+
+.Rating table tr {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.Rating table tr td input {
+    width: 100%;
+    height: 1rem;
+    border: 1px solid #cfcfcf;
+    border-radius: 5px;
+    outline: none;
+    margin-right: 2rem;
+}

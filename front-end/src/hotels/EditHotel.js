@@ -1,0 +1,101 @@
+import { useState, useEffect } from "react";
+import { toast } from "react-toastify";
+import { read, updateHotel } from "../actions/hotel";
+import {useDispatch, useSelector} from "react-redux";
+import HotelEditForm from "../@components/forms/HotelEditForm";
+import { API } from "../common/constants/api";
+
+const EditHotel = ({ match, history }) => {
+  const { auth } = useSelector((state) => ({ ...state }));
+  const { token } = auth;
+  const dispatch = useDispatch();
+  const [values, setValues] = useState({
+    title: "",
+    content: "",
+    location: "",
+    image: "",
+    price: "",
+    bed: "",
+  });
+  const [preview, setPreview] = useState(
+    "https://via.placeholder.com/100x100.png?text=PREVIEW"
+  );
+  const [image, setImage] = useState("");
+  const { title, content, price, bed, location } = values;
+
+  useEffect(() => {
+    loadSellerHotel().then(r => {});
+  }, []);
+
+  const loadSellerHotel = async () => {
+    let res = await read(match.params.roomId);
+    setValues({ ...values, ...res.data });
+    setPreview(`${API.BASE_URL}/rooms/image/${res.data._id}`);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    let hotelData = new FormData();
+    hotelData.append("title", title);
+    hotelData.append("content", content);
+    hotelData.append("location", location);
+    hotelData.append("price", price);
+    image && hotelData.append("image", image);
+    hotelData.append("bed", bed);
+
+    try {
+      dispatch({
+        type: "SHOW_LOADING",
+      });
+      let res = await updateHotel(token, hotelData, match.params.roomId);
+      dispatch({
+        type: "HIDE_LOADING",
+      });
+      toast.success(`${res.data.title} đã được cập nhật, chờ quản trị viên duyệt thông tin`);
+      history.push("/dashboard/seller/rooms");
+    } catch (err) {
+      console.log(err);
+      toast.error(err.response.data.err);
+    }
+  };
+
+  const handleImageChange = (e) => {
+    setPreview(URL.createObjectURL(e.target.files[0]));
+    setImage(e.target.files[0]);
+  };
+
+  const handleChange = (e) => {
+    setValues({ ...values, [e.target.name]: e.target.value });
+  };
+
+  return (
+    <>
+      <div className="container-fluid p-3 text-center">
+        <h2>Chỉnh sửa thông tin phòng {values.title}</h2>
+      </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-6">
+            <HotelEditForm
+              values={values}
+              setValues={setValues}
+              handleChange={handleChange}
+              handleImageChange={handleImageChange}
+              handleSubmit={handleSubmit}
+            />
+          </div>
+          <div className="col-md-6">
+            <img
+              src={preview}
+              alt="preview_image"
+              className="img img-fluid m-2"
+            />
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default EditHotel;

@@ -1,0 +1,147 @@
+.detail{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.detailBody{
+    width: 60%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.detailBodyTitle h1{
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+.detailBodyTitle h2{
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: left;
+}
+
+.detailBodyTitle p{
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.detailBodyContent{
+    display: flex;
+    justify-content: space-between;
+}
+
+.detailBodyContent h1{
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: left;
+    line-height: 2;
+}
+
+.detailBodyContent p{
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: justify;
+    line-height: 2;
+}
+
+.detailLocation{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 0 3rem 0;
+}
+
+.detailLocation h1{
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 2;
+}
+
+.detailLocation p{
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    line-height: 2;
+}
+
+.detailLocationRoom{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3rem 0 3rem 0;
+}
+
+.bookNow{
+    background-color: black;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.detailLocationRoomTitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detailLocationRoomTitle h1{
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 3;
+}
+
+.detailLocationRoomTitle ul{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.detailLocationRoomTitle ul li{
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 2;
+}
+
+
+.card {
+    max-width: 300px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 500px;
+    height: 300px;
+    padding: 35px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(15px);
+}
+
+.card-footer {
+    font-size: 0.65em;
+    color: #446;
+}

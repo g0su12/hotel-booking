@@ -1,0 +1,97 @@
+.login {
+  height: 94vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.loginLeft {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+  flex-direction: column;
+}
+
+.loginLeft .loginHead {
+  width: 100%;
+}
+
+.loginLeft .loginHead a {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  text-decoration: none;
+  align-items: center;
+  padding: 20px;
+}
+
+.loginHead h1 {
+  font-size: 150%;
+  color: #333;
+  font-weight: 600;
+  margin: 0;
+}
+
+.loginHead img {
+  width: 2%;
+  height: 2%;
+  margin-right: 10px;
+}
+
+.loginRight {
+  width: 65%;
+  height: 100vh;
+  background: url("https://danang-shopping.com/wp-content/uploads/2017/05/khach-san-da-nang-co-ho-boi-dep-diamond-sea-hotel.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.loginBody {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loginBody h1 {
+  font-size: 150%;
+  color: #333;
+  font-weight: 600;
+  margin: 0;
+}
+
+.loginBody p {
+  font-size: 100%;
+  color: #333;
+  font-weight: 400;
+  margin: 0;
+  padding: 1%;
+  width: 50%;
+}
+
+.loginBodyInput {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 50%;
+  padding: 2%;
+}
+
+.loginBodyInput button {
+  background: #000;
+  color: #fff;
+}
+
+.switch-mode {
+  font-size: 13px;
+  margin-bottom: 20px;
+}
